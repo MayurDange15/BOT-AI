@@ -1,10 +1,15 @@
-import { Typography, Stack, useMediaQuery } from "@mui/material";
+import { Typography, Stack, IconButton, useMediaQuery } from "@mui/material";
 import { Link, useOutletContext } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { ThemeContext } from "../../theme/ThemeContext";
+import { useContext } from "react";
 
 export default function Navbar() {
   const { handleMobileMenu } = useOutletContext();
   const isMobile = useMediaQuery("(max-width:800px)");
+  const { setMode, mode } = useContext(ThemeContext);
 
   return (
     <Stack
@@ -24,6 +29,25 @@ export default function Navbar() {
             Bot AI
           </Typography>
         </Link>
+      </Stack>
+
+      <Stack direction={"row"} spacing={0.2} alignItems={"center"}>
+        <Typography textTransform={"capitalize"} fontSize={10}>
+          {mode}
+        </Typography>
+        <IconButton
+          onClick={() =>
+            setMode((prev) => {
+              if (prev === "light") {
+                return "dark";
+              } else {
+                return "light";
+              }
+            })
+          }
+        >
+          {mode === "light" ? <Brightness4Icon /> : <Brightness7Icon />}
+        </IconButton>
       </Stack>
     </Stack>
   );

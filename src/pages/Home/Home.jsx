@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import data from "../../aiData/sampleData.json";
 import { useOutletContext } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
+import { ThemeContext } from "../../theme/ThemeContext";
+import { useContext } from "react";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -15,6 +17,7 @@ export default function Home() {
   const [selectedChatId, setSelectedChatId] = useState(null);
   const [scrollToBottom, setScrollToBottom] = useState(false);
   const { chat, setChat } = useOutletContext();
+  const { mode } = useContext(ThemeContext);
 
   // GENERATING AI RESPONSE
   const generateResponse = (input) => {
@@ -53,7 +56,16 @@ export default function Home() {
   }, [scrollToBottom]);
 
   return (
-    <Stack height={"100vh"} justifyContent={"space-between"}>
+    <Stack
+      height={"100vh"}
+      justifyContent={"space-between"}
+      sx={{
+        "@media (max-width:767px)": {
+          background:
+            mode === "light" ? "linear-gradient(#F9FAFA 60%, #EDE4FF)" : "",
+        },
+      }}
+    >
       <Navbar />
 
       {chat.length === 0 && <InitialChat generateResponse={generateResponse} />}

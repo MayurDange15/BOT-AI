@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../theme/ThemeContext";
 import { Typography, Box, Stack, Button, useMediaQuery } from "@mui/material";
 import icon from "../../assets/newchat.png";
 import { Link } from "react-router-dom";
@@ -5,12 +7,26 @@ import AddCommentIcon from "@mui/icons-material/AddComment";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Sidebar({ setChat, closeMenu }) {
+  const { mode, setMode } = useContext(ThemeContext);
   const isMobile = useMediaQuery("(max-width:800px)");
+
+  //eslint-disable-next-line
+  const handleMode = () => {
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  };
 
   return (
     <Box>
       {isMobile && (
-        <Button endIcon={<CloseIcon />} onClick={closeMenu}>
+        <Button
+          endIcon={<CloseIcon />}
+          sx={{
+            width: 1,
+            justifyContent: "flex-end",
+            color: mode === "light" ? "primary.dark" : "text.primary",
+          }}
+          onClick={closeMenu}
+        >
           Close
         </Button>
       )}
