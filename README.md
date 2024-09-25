@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# AI Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a simple ReactJS web application that allows users to chat with an AI model and provide feedback on the responses. Users can like/dislike responses, rate the conversation, and leave subjective feedback. The app also allows users to revisit past conversations and view aggregated feedback.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Chat interface with AI responses
+- Feedback mechanism with thumbs up/down buttons
+- Rating system at the end of the conversation (1-5)
+- Subjective feedback input
+- View past conversations and feedback
+- Filter feedback based on ratings
+- Light/Dark mode toggle (Bonus)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: ReactJS
+- **UI Library**: Material-UI
+- **Routing**: React Router
+- **State Management**: React State / Context API
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm (v5.6 or higher)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/MayurDange15/MEDIFY.git
+   cd MEDIFY
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+4. Open your browser and navigate to `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Using the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start a conversation by typing your message in the input box.
+2. Hover over the AI response to see thumbs up/down buttons for feedback.
+3. Rate the conversation out of 5 at the end.
+4. Leave subjective feedback in the provided text area.
+5. Access past conversations from the sidebar.
+6. View and filter feedback based on ratings.
 
-### Code Splitting
+## Technical Choices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **ReactJS**: Chosen for its component-based architecture, making it easy to build reusable UI components.
+- **Material-UI**: Used for a consistent and responsive design, providing ready-to-use components.
+- **React Router**: Implemented for easy navigation between different views of the application.
+- **State Management**: Utilized React's built-in state management for simplicity and ease of integration.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
-### Making a Progressive Web App
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or suggestions, please contact [Mayur](mailto:mayurdange15081996@gmail.com).
