@@ -35,8 +35,8 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/MayurDange15/MEDIFY.git
-   cd MEDIFY
+   git clone https://github.com/MayurDange15/BOT-AI.git
+   cd BOT-AI
    ```
 
 2. Install dependencies:
